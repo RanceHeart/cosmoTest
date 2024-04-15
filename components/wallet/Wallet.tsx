@@ -43,7 +43,13 @@ export function Wallet() {
   }[status] || <ButtonConnect onClick={connect} />;
 
   return (
-    <Box py="$16">
+    <Box
+        gridTemplateColumns={{
+            tablet: "repeat(2, 1fr)",
+            desktop: "repeat(3, 1fr)",
+        }}
+        mb="$16"
+        gap="$12">
       <Stack attributes={{ mb: "$12", justifyContent: "center" }}>
         <Chain
           name={chain.pretty_name}
